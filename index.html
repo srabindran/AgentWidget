@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="widget.js"></script>
+    <script type="text/javascript" src="notify.js"></script>
+    <script type="text/javascript" src="https://lpcdn.lpsnmedia.net/webagent/client-SDK.min.js"></script>
+</head>
+<body>
+                <div id ="error"> </div>
+                <div id ="agentWidget">
+                        <form class="well form-search" id="search-by-title-form" onsubmit="return false;">
+                        <fieldset>
+                            Search Movie By Title
+                        
+                        <div>
+                            <label class="control-label" for="t">Title:</label>
+                            <input type="text" id="t" name="t" class="input-small" required>
+                            &nbsp;&nbsp;
+                            <label class="control-label" for="y">Year:</label>
+                            <input type="text" id="y" name="y" class="input-small" style="width: 100px;">
+                            &nbsp;&nbsp;
+                            <label class="control-label">Plot:</label>
+                            <select name="plot" id="plot" style="width: 100px;">
+                                <option value="" selected="">Short</option>
+                                <option value="full">Full</option>
+                            </select>
+                            &nbsp;&nbsp;
+                         
+                            <button id="search-by-title-button" type="button" onclick="searchTitle();">Search</button>
+                            <button id="search-by-title-reset" type="reset"  onclick="resetValues();">Reset</button>
+                            <button id="search-by-last-msg" type="button"  onclick="searchLastMessage();">Search by Last Message</button>
+                        </div>
+
+                        <div class="hide" id="search-by-title-response">
+                            <p>Response:</p>
+                            <pre class="alert alert-success" style="margin-bottom: 0px; white-space: normal;"></pre>
+                        </div>
+                        <div id="search-by-msg-string">
+                            <p>Search by Message String:</p>
+                            
+                        </div>
+                        <div id="search-by-msg-response">
+                            <p>Search by Message Response:</p>
+                            
+                        </div>
+                    </fieldset>
+                        </form>
+                    
+            </div>
+</body>
+</html>
